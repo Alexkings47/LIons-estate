@@ -48,7 +48,7 @@ export default Outlook;
 
 const StyledOutlook = styled.section`
   padding: 2.5rem 2rem;
-  height: 70vh;
+  height: 80vh;
   background-color: #060129;
   font-family: "karla", sans-serif;
   text-align: left;
@@ -73,6 +73,9 @@ const StyledOutlook = styled.section`
   .long-info {
     grid-row: 4/5;
     grid-column: 4/7;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 200;
+    font-size: 14.5px;
   }
   .image-elem1 {
     grid-column: 1 / span 3;
@@ -89,8 +92,8 @@ const StyledOutlook = styled.section`
       transform: translate(-50%, 230px);
       text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
         1px 1px 0 #000;
-        z-index:-2;
-      transition: .5s;
+      z-index: -2;
+      transition: 0.5s;
     }
 
     & > .image1:hover {
@@ -106,13 +109,14 @@ const StyledOutlook = styled.section`
     grid-row: 1/3;
     grid-column: 2/6;
     font-size: 28px;
-    line-height: 1.4;
+    line-height: 1.2;
     z-index: 11;
     text-transform: capitalize;
-    font-weight: 100;
+    font-weight: 700;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000;
     filter: brightness(120%);
+    font-family: "Quicksand", sans-serif;
   }
   .image1 {
     width: 100%;

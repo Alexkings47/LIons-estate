@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-function Button({ value, color, icon }) {
+function Button({ value, color, icon, width }) {
+  let classlist = [width, color];
+
   return (
-    <StyledBtn className={color}>
+    <StyledBtn className={classlist}>
       {value} {icon}
     </StyledBtn>
   );
@@ -17,14 +19,14 @@ const StyledBtn = styled.button`
   padding: auto 20px;
   border-radius: 4px;
   cursor: pointer;
-  box-shadow: 2px 1.5px rgba(0,0,0,0.2);
+  box-shadow: 2px 1.5px rgba(0, 0, 0, 0.2);
   font-size: 12px;
-  border:none;
+  border: none;
   filter: blur(0);
   transition: 0.5s;
-  font-weight:600;
+  font-weight: 600;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
   }
 

@@ -1,23 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import { BiCurrentLocation } from "react-icons/bi";
+import Button from "./Button/Button";
 
 const ProductCard = ({ image, title, price, location, specification }) => {
   return (
-    <ProductCard>
-      <img src={image} alt={title} />
+    <StyledDiv>
+      <img src={require(`../images/${image}`)} alt={title} />
       <div className="details">
         <h2>{title}</h2>
         <p className="price">{price}</p>
-        <i>arrow</i>
+
         <small>
           <BiCurrentLocation />
           {location}
         </small>
         <small className="specifications">{specification}</small>
-        <Button value={"view me"} color={"btn-orange"} />
+
+        <Button value={"view me"} color={"btn-blue"} width={"btn-small"} />
       </div>
-    </ProductCard>
+      
+    </StyledDiv>
   );
 };
 
@@ -25,18 +28,45 @@ export default ProductCard;
 
 const StyledDiv = styled.div`
   display: flex;
-  width: 40%;
+  border: 2px solid #061580;
+  font-size: 90%;
+  height: 100%;
+  border-radius: 3px;
+  font-family: "karla";
+
+  & > img {
+    width: 40%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .btn-small {
+    width: 4rem;
+  }
+  .btn-blue {
+    background-color: #061580;
+    color: white;
+  }
 
   .details {
-    padding: 20px 10px 10px;
+    border-left: 1px dashed #061580;
+    padding: 15px 10px 15px;
     display: flex;
-    flex-direcction: column;
-    justify-contents: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     align-items: flex-start;
-    width: 60%;
     display: flex;
+    text-align: left;
   }
   .price {
     color: #44a8eb;
+    font-size: 13px;
+    letter-spacing: -1px;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 15px;
   }
 `;
