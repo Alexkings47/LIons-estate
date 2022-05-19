@@ -53,9 +53,10 @@ const StyledDiv = styled.form`
   height: 7rem;
   background: linear-gradient(
     to right,
-    rgba(11, 1, 41, 0.7),
+    rgba(68, 168, 235, 0.508),
     rgba(255, 255, 255, 0.7)
   );
+
   position: relative;
   display: flex;
   align-items: center;
@@ -67,9 +68,9 @@ const StyledDiv = styled.form`
       width: 4rem;
     }
   }
-
-  .enableBlur > * {
-    filter: blur(5px);
+ 
+  &.enableBlur > * {
+    filter: blur(2px);
   }
   .disableBlur {
     filter: blur(0);

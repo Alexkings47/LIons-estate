@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import Search from "../SearchForm/SearchForm";
 import styled from "styled-components";
 import Partners from "../Partners";
-import img from "../../images/bgresort.jpg";
+import img from "../../images/bgheader.jpg";
 
 const Header = () => {
   return (
@@ -36,7 +36,7 @@ const StyledHeader = styled.header`
   font-family: "poppins";
 
   .header-body {
-    background: linear-gradient(rgba(55, 45, 127, 0.408), rgba(0, 0, 0, 0.403)),
+    background: linear-gradient(rgba(68, 168, 235, 0.408), rgba(0, 0, 0, 0.403)),
       url(${img});
     background-repeat: no-repeat;
     background-position: center;
@@ -47,7 +47,6 @@ const StyledHeader = styled.header`
     justify-content: center;
     color: white;
     padding: 1rem;
-    filter: brightness(120%);
     border-radius: 20px;
     padding: 2rem;
     text-transform: capitalize;
