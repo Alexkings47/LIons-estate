@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import FeaturedCard from "./FeaturedCard";
 import { Products } from "../Products";
+import ProductCard from "./ProductCard";
 
 const Featured = () => {
   const Newprojects = Products.map((product) => {
     return (
-      <FeaturedCard
+      <ProductCard
         image={product.images}
         title={product.title}
         price={product.price}
@@ -29,15 +29,22 @@ export default Featured;
 
 const StyledSection = styled.section`
   height: 100vh;
+  padding: 14px 3rem 20px;
 
   .featured-grid {
     padding-top: 15px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
     grid-gap: 20px;
-    height: 75%;
-    width: 75vh;
+    grid-column-gap: 10%;
     margin: 0 auto;
+  }
+  h1 {
+    color: #061580;
+    font-size: 30px;
+    font-family: "quicksand";
+    margin-bottom: 10px;
+    font-weight: 900;
   }
 `;

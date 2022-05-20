@@ -1,31 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { IoLocationSharp } from "react-icons/io5";
+import { BiCurrentLocation } from "react-icons/bi";
 import Button from "./Button/Button";
 
-const FeaturedCard = ({
-  image,
-  title,
-  price,
-  location,
-  specification,
-  status,
-  color,
-}) => {
+
+const FeaturedCard = ({ image, title, price, location, specification }) => {
   return (
     <StyledDiv>
-      <img src={require(`../images/bgimg.jpeg`)} alt={title} className="img" />
-      <Button value={status} color={"btn-orange"} width={"btn-small"} />
+      <img src={require(`../images/${image}`)} alt={title} />
       <div className="details">
         <h2>{title}</h2>
         <p className="price">{price}</p>
+
         <small>
-          <IoLocationSharp className="icon" />
+          <BiCurrentLocation />
           {location}
         </small>
         <small className="specifications">{specification}</small>
+
+        <Button value={"view me"} color={"btn-blue"} width={"btn-small"} />
       </div>
-      {/* <Button value={"view me"} color={"btn-blue"} width={"btn-small"} /> */}
+      
     </StyledDiv>
   );
 };
@@ -33,41 +28,41 @@ const FeaturedCard = ({
 export default FeaturedCard;
 
 const StyledDiv = styled.div`
-  width: 100%;
-  position: relative;
-  border-radius: 4px;
-  border: 1px solid black;
-  overflow: hidden;
+  display: flex;
+  box-shadow: 5px 5px 8px #061580;
+  font-size: 90%;
+  height: 100%;
+  border-radius: 3px;
   font-family: "karla";
 
+  & > img {
+    width: 40%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .btn-small {
+    width: 4rem;
+  }
+  .btn-blue {
+    background-color: #061580;
+    color: white;
+  }
+
   .details {
+    border-left: 1px dashed #061580;
+    padding: 15px 10px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     align-items: flex-start;
-    height: 50%;
+    display: flex;
     text-align: left;
-    padding: 10px 5px;
-  }
-
-  .img {
-    width: 100%;
-    height: 50%;
-    display: block;
-    object-fit: cover;
-  }
-
-  .icon {
-    color: orangered;
-    margin-left: -3px;
-  }
-  .btn-small {
-    width: 4rem;
-    position: absolute;
-    top: 5px;
-    left: 5px;
   }
   .price {
+    color: #44a8eb;
     font-size: 13px;
     letter-spacing: -1px;
     font-weight: 500;

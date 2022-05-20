@@ -1,18 +1,20 @@
 import "./App.css";
-import Header  from './components/Header/Header'
-import Outlook from "./components/outlook/Outlook";
-import NewAdditions from "./components/NewAdditions";
-import Featured from "./components/Featured";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Home from "./pages/home"
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Outlook />
-      <NewAdditions />
-      <Featured />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        {/* <Route exact path="page1" element={<Page1 />} />
+        <Route exact path="page2" element={<Page2 />} />
+        <Route exact path="page3" element={<Page3 />} /> */}
+      </div>
+    </Router>
   );
 }
 

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { VscSmiley } from "react-icons/vsc";
 import Button from "../Button/Button";
 
 const Outlook = () => {

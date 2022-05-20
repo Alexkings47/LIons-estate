@@ -18,4 +18,8 @@ const Partners = () => {
 export default Partners
 
 const StyledDiv = styled.div`
-`
+padding: 1rem 3rem;
+  h1 {
+    color: #061580;
+  }
+`;

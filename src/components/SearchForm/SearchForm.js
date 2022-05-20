@@ -54,21 +54,22 @@ const StyledDiv = styled.form`
   background: linear-gradient(
     to right,
     rgba(68, 168, 235, 0.508),
-    rgba(255, 255, 255, 0.7)
+    rgba(236, 126, 242, .4)
   );
-
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  box-shadow: 5px 5px 8px #888888;
+  border-radius: 5px;
 
   @media (max-width: 800px) {
     & > * {
       width: 4rem;
     }
   }
- 
+
   &.enableBlur > * {
     filter: blur(2px);
   }

@@ -1,25 +1,43 @@
 import React from "react";
 import styled from "styled-components";
-import { BiCurrentLocation } from "react-icons/bi";
+import { IoLocationSharp } from "react-icons/io5";
+import { IoMdBed } from "react-icons/io";
 import Button from "./Button/Button";
+import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 
-const ProductCard = ({ image, title, price, location, specification }) => {
+const ProductCard = ({
+  image,
+  title,
+  price,
+  location,
+  specification,
+  status,
+  color,
+}) => {
   return (
     <StyledDiv>
-      <img src={require(`../images/${image}`)} alt={title} />
+      <img src={require(`../images/bgimg.jpeg`)} alt={title} className="img" />
+      <Button value={status} color={"btn-orange"} width={"btn-small"} />
+      <AiOutlineHeart className="icon-heart" />
       <div className="details">
-        <h2>{title}</h2>
+        <h2>
+          {title}
+          <i>
+            {" "}
+            <AiFillStar className="icon-star" />
+          </i>
+        </h2>
         <p className="price">{price}</p>
-
         <small>
-          <BiCurrentLocation />
+          <IoLocationSharp className="icon" />
           {location}
         </small>
-        <small className="specifications">{specification}</small>
-
-        <Button value={"view me"} color={"btn-blue"} width={"btn-small"} />
+        <small className="specifications">
+          <IoMdBed className="icon" />
+          {specification}
+        </small>
       </div>
-      
+      {/* <Button value={"view me"} color={"btn-blue"} width={"btn-small"} /> */}
     </StyledDiv>
   );
 };
@@ -27,46 +45,62 @@ const ProductCard = ({ image, title, price, location, specification }) => {
 export default ProductCard;
 
 const StyledDiv = styled.div`
-  display: flex;
-  border: 2px solid #061580;
-  font-size: 90%;
-  height: 100%;
-  border-radius: 3px;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
   font-family: "karla";
-
-  & > img {
-    width: 40%;
-    display: block;
-    object-fit: cover;
-    height: 100%;
-  }
-
-  .btn-small {
-    width: 4rem;
-  }
-  .btn-blue {
-    background-color: #061580;
-    color: white;
-  }
+  box-shadow: 5px 5px 8px #888888;
 
   .details {
-    border-left: 1px dashed #061580;
-    padding: 15px 10px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     align-items: flex-start;
-    display: flex;
+    height: 50%;
     text-align: left;
+    padding: 10px 5px;
+  }
+
+  .img {
+    width: 100%;
+    height: 60%;
+    display: block;
+    object-fit: cover;
+  }
+  small {
+    color: #626370;
+  }
+  .icon {
+    color: orangered;
+    margin-left: -3px;
+  }
+  .icon-heart {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+    color: orangered;
+    // background-color: red;
+  }
+  .icon-star {
+    color: orangered;
+    float: right;
+  }
+  .btn-small {
+    width: 4rem;
+    position: absolute;
+    top: 5px;
+    left: 5px;
   }
   .price {
-    color: #44a8eb;
     font-size: 13px;
     letter-spacing: -1px;
     font-weight: 500;
   }
   h2 {
     font-size: 15px;
+    width: 100%;
   }
 `;
