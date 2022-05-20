@@ -32,5 +32,6 @@ const StyledBtn = styled.button`
 
   &.btn-orange {
     background-color: orangered;
+    color: white;
   }
 `;

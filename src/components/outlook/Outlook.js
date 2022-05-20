@@ -8,13 +8,12 @@ const Outlook = () => {
     <StyledOutlook className="outlook-wrapper">
       <div className="outlook">
         <p className="short-info">
-          The world is not ours to give but we can give some part of it. Through
-          the most risk-free method.
+          The world is not ours to give but we can give some part of it, risk-free methods.
         </p>
         <figure className="image-elem1">
           <img
             className="image1"
-            src={require("../../images/estate.jpg")}
+            src={require("../../images/finehouse.jpg")}
             alt=""
           />
           <p>ESTATES</p>
@@ -23,7 +22,7 @@ const Outlook = () => {
         <figure className="image-elem3">
           <img
             className="image3"
-            src={require("../../images/finehouse.jpg")}
+            src={require("../../images/bgimg.jpeg")}
             alt=""
           />
         </figure>
