@@ -53,8 +53,8 @@ const StyledDiv = styled.form`
   height: 7rem;
   background: linear-gradient(
     to right,
-    rgba(68, 168, 235, 0.508),
-    rgba(236, 126, 242, .4)
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.4)
   );
   position: relative;
   display: flex;

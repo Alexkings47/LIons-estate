@@ -111,10 +111,7 @@ const StyledOutlook = styled.section`
     z-index: 11;
     text-transform: capitalize;
     font-weight: 700;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000;
-    filter: brightness(120%);
-    font-family: "Quicksand", sans-serif;
+    font-family: "poppins", sans-serif;
   }
   .image1 {
     width: 100%;

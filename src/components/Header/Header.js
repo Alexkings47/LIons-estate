@@ -13,13 +13,13 @@ const Header = () => {
       <div className="header-body">
         <div className="header_elements">
           <p className="title"> Lions estate agency </p>
-          <h1 className="heading-left">
-            Your house <span className="heading-end">your pride</span>
-          </h1>
           <div className="quick-details">
             <Button value={"For Purchase"} />
             <Button value={"For rent"} color={"btn-orange"} />
           </div>
+          <h1 className="heading-left">
+            ... Your house <span className="heading-end">your pride</span>
+          </h1>
           <Search />
         </div>
       </div>
@@ -58,22 +58,22 @@ const StyledHeader = styled.header`
     justify-content: center;
   }
   .title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    // color: #061580;
-    color: black;
+    color: orangered;
     text-transform: uppercase;
     font-family: "poppins", sans-serif;
-    
+    margin-bottom: 1.1rem;
+    color: #061580;
   }
   .heading-left {
     font-weight: 100;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: -1px;
-   
+    font-style: italic;
+    text-transform: lowercase;
     margin-bottom: 10px;
-    color: #061580;
-    
+    color: white;
   }
 
   .heading-end {

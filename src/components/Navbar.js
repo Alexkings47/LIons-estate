@@ -1,15 +1,18 @@
 import React from "react";
 import { GoSearch } from "react-icons/go";
 import styled from "styled-components";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <StyledNav className="navbar">
-      <img
-        src={require("../images/lion.jpg")}
-        className="navbar-logo"
-        alt="logo"
-      />
+      <Link to="/">
+        <img
+          src={require("../images/lion.jpg")}
+          className="navbar-logo"
+          alt="logo"
+        />
+      </Link>
       <div className="nav-right">
         <ul className="nav-items">
           <li className="nav-links">
@@ -38,15 +41,15 @@ function Navbar() {
 export default Navbar;
 
 const StyledNav = styled.nav`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12.5px;
-    font-weight: 500;
-    line-height: 0.9;
-    font-family: "inter", "sans-serif";
-    padding: 8px 10px;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 0.9;
+  font-family: "inter", "sans-serif";
+  padding: 8px 10px;
+  color: #061580;
   .nav-right {
     display: flex;
     justify-content: space-between;

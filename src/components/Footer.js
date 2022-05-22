@@ -6,7 +6,7 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import {IoIosArrowUp} from "react-icons/io5"
 const Footer = () => {
   return (
     <StyledFooter>
@@ -49,6 +49,7 @@ const Footer = () => {
           <Link className="link" to="/components/Header/Header">
             terms
           </Link>
+          <a ><IoIosArrowUp /></a>
         </li>
       </ul>
     </StyledFooter>
