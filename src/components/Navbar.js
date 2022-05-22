@@ -50,6 +50,15 @@ const StyledNav = styled.nav`
   font-family: "inter", "sans-serif";
   padding: 8px 10px;
   color: #061580;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 12;
+   background-color: rgb(240, 240, 230);
+
+  
+
   .nav-right {
     display: flex;
     justify-content: space-between;

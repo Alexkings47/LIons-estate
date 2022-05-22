@@ -45,13 +45,14 @@ const ProductCard = ({
 export default ProductCard;
 
 const StyledDiv = styled.div`
-  width: 100%;
+  width: 90%;
   height: 350px;
   position: relative;
   border-radius: 4px;
   overflow: hidden;
   font-family: "karla";
   box-shadow: 5px 5px 8px #888888;
+  background:white;
 
   .details {
     display: flex;
@@ -98,6 +99,7 @@ const StyledDiv = styled.div`
     font-size: 13px;
     letter-spacing: -1px;
     font-weight: 500;
+   color: #44a8eb;
   }
   h2 {
     font-size: 15px;

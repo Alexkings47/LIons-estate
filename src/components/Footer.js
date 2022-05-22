@@ -6,9 +6,18 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {IoIosArrowUp} from "react-icons/io5"
+import {IoIosArrowUp} from "react-icons/io"
+
+
+
 const Footer = () => {
+const [showfilters, setShowFilters] = React.useState(false)
+function toggle(){
+ setShowFilters(!showfilters)
+}
+
   return (
+    // {showfilters? :""}
     <StyledFooter>
       <h2> &copy; 2022 Lions Estate Agency.</h2>
 
@@ -49,7 +58,11 @@ const Footer = () => {
           <Link className="link" to="/components/Header/Header">
             terms
           </Link>
-          <a ><IoIosArrowUp /></a>
+        </li>
+        <li>
+          <button onClick={toggle}>
+            <IoIosArrowUp className="icons" />
+          </button>
         </li>
       </ul>
     </StyledFooter>
@@ -59,7 +72,7 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  background-color: #44a8eb;
+  color: #44a8eb;
   height: 5rem;
   position: fixed;
   bottom: 0;
@@ -68,7 +81,8 @@ const StyledFooter = styled.footer`
   width: 100%;
   margin-top: 4rem;
   padding: 0 20px;
-  color: #061580;
+  // background-color: #061580;
+  background-color: #060129;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,13 +108,14 @@ const StyledFooter = styled.footer`
   }
   .link {
     text-decoration: none;
-    color: #061580;
+    color: #44a8eb;
     position: relative;
   }
-  .link:visited,
-   {
-    color: black;
+  button {
+    border: none;
+    background: none;
   }
+ 
 
   .link::after {
     content: "";

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 
+ /* background-color: #e7eaeb; */
 }
 
 *{
@@ -15,9 +16,10 @@
 }
 
 
+
+
 .App-link {
   color: #61dafb;
- transform: tr;
 }
 /* .long-info {
     

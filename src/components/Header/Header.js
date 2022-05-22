@@ -12,15 +12,15 @@ const Header = () => {
       <Navbar />
       <div className="header-body">
         <div className="header_elements">
-          <p className="title"> Lions estate agency </p>
+          <h1 className="title"> Lions estate agency </h1>
           <div className="quick-details">
             <Button value={"For Purchase"} />
             <Button value={"For rent"} color={"btn-orange"} />
           </div>
-          <h1 className="heading-left">
-            ... Your house <span className="heading-end">your pride</span>
-          </h1>
           <Search />
+          <h3 className="heading-left">
+            ... Your house <span className="heading-end">your pride</span>
+          </h3>
         </div>
       </div>
       <Partners />
@@ -32,12 +32,12 @@ export default Header;
 
 const StyledHeader = styled.header`
   padding: 1rem 3rem 40px;
-  height: 100vh;
   font-family: "Quicksand", sans-serif;
+  position: relative;
+  background-color: rgb(240, 240, 230);
 
   .header-body {
-    background: linear-gradient(rgba(68, 168, 235, 0.408), rgba(0, 0, 0, 0.403)),
-      url(${img});
+    background: url(${img});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,10 +46,10 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-content: center;
     color: black;
-    padding: 1rem;
     border-radius: 20px;
     padding: 2rem;
     text-transform: capitalize;
+    margin-top: 2.7rem;
   }
   .header_elements {
     display: flex;
@@ -58,7 +58,7 @@ const StyledHeader = styled.header`
     justify-content: center;
   }
   .title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: orangered;
     text-transform: uppercase;
@@ -68,12 +68,12 @@ const StyledHeader = styled.header`
   }
   .heading-left {
     font-weight: 100;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: -1px;
     font-style: italic;
     text-transform: lowercase;
     margin-bottom: 10px;
-    color: white;
+    color: #061580;
   }
 
   .heading-end {
@@ -84,6 +84,6 @@ const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     width: 17rem;
-    margin-bottom: 2rem;
+    padding: 1rem 0;
   }
 `;

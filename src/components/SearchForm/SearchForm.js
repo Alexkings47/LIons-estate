@@ -8,41 +8,43 @@ import { AiOutlineCaretDown } from "react-icons/ai";
 
 const Search = () => {
   return (
-    <StyledDiv className="enableBlur">
-      <input
-        name="location"
-        type="text"
-        value=""
-        placeholder="Enter Location"
-        className="disableBlur"
-      />
-      {/* <FiMapPin className="icons" /> */}
+    <StyledDiv>
+      <div className="enableBlur"></div>
+      <div className="content">
+        <input
+          name="location"
+          type="text"
+          value=""
+          placeholder="Enter Location"
+        />
+        {/* <FiMapPin className="icons" /> */}
 
-      <select name="All properties" className="disableBlur">
-        <option>All properties</option>
-        <option value="Lands">Lands</option>
-        <option value="Houses">Houses</option>
-        <option value="Furniture">Furniture</option>
-      </select>
-      {/* <AiOutlineCaretDown className="icons" /> */}
+        <select name="All properties">
+          <option>All properties</option>
+          <option value="Lands">Lands</option>
+          <option value="Houses">Houses</option>
+          <option value="Furniture">Furniture</option>
+        </select>
+        {/* <AiOutlineCaretDown className="icons" /> */}
 
-      <select name="price" className="disableBlur">
-        <option>All Prices</option>
-        <option value="150k and Below">150k and Below</option>
-        <option value="250k and below">250k and below</option>
-        <option value="350k and Below">350k and Below</option>
-      </select>
-      {/* <AiOutlineCaretDown className="icons" /> */}
+        <select name="price">
+          <option>All Prices</option>
+          <option value="150k and Below">150k and Below</option>
+          <option value="250k and below">250k and below</option>
+          <option value="350k and Below">350k and Below</option>
+        </select>
+        {/* <AiOutlineCaretDown className="icons" /> */}
 
-      <select name="room" className="disableBlur">
-        <option>Type</option>
-        <option value="Lands">Lands</option>
-        <option value="Houses">Houses</option>
-        <option value="Furniture">Furniture</option>
-      </select>
-      {/* <AiOutlineCaretDown className="icons" /> */}
+        <select name="room">
+          <option>Type</option>
+          <option value="Lands">Lands</option>
+          <option value="Houses">Houses</option>
+          <option value="Furniture">Furniture</option>
+        </select>
+        {/* <AiOutlineCaretDown className="icons" /> */}
 
-      <Button value="Search now" color={"btn-orange disableBlur"} />
+        <Button value="Search now" color={"btn-orange disableBlur"} />
+      </div>
     </StyledDiv>
   );
 };
@@ -57,32 +59,43 @@ const StyledDiv = styled.form`
     rgba(255, 255, 255, 0.4)
   );
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
   box-shadow: 5px 5px 8px #888888;
   border-radius: 5px;
 
   @media (max-width: 800px) {
-    & > * {
+    .content > * {
       width: 4rem;
     }
   }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
 
-  &.enableBlur > * {
-    filter: blur(2px);
+    & > * {
+      min-width: 6rem;
+      padding: 10px;
+      text-align: centre;
+      border-radius: 4px;
+      margin-right: 10px;
+      height: 2.5rem;
+      z-index: 3;
+    }
   }
-  .disableBlur {
-    filter: blur(0);
-  }
-  & > * {
-    min-width: 6rem;
-    padding: 10px;
-    text-align: centre;
-    border-radius: 4px;
-    margin-right: 10px;
-    height: 2.5rem;
+  .enableBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(20px);
+    z-index: 1;
+    background-color: rgba(255,255,255, 0.6);
+   
   }
 
   .icons {
@@ -94,4 +107,5 @@ const StyledDiv = styled.form`
     padding: 0;
     //  indent: 10px;
   }
+  
 `;

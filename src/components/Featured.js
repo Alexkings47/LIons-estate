@@ -19,7 +19,7 @@ const Featured = () => {
   });
   return (
     <StyledSection>
-      <h1 style={{color:"red"}}> Featured Houses</h1>
+      <h1> Featured Houses</h1>
       <div className="featured-grid">{Newprojects}</div>
     </StyledSection>
   );
@@ -31,6 +31,11 @@ const StyledSection = styled.section`
   height: 100vh;
   padding: 14px 3rem 20px;
 
+  background-color: rgb(240, 240, 230);
+
+  @media (max-width: 800px) {
+    margin-bottom: 10rem;
+  }
   .featured-grid {
     padding-top: 15px;
     display: grid;

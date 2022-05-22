@@ -46,10 +46,11 @@ export default Outlook;
 
 const StyledOutlook = styled.section`
   padding: 2.5rem 2rem;
-  height: 80vh;
+  height:calc(100vh - 8rem);
   background-color: #060129;
   font-family: "karla", sans-serif;
   text-align: left;
+ 
 
   .outlook {
     display: grid;
