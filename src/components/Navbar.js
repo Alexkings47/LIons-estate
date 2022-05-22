@@ -15,24 +15,35 @@ function Navbar() {
       </Link>
       <div className="nav-right">
         <ul className="nav-items">
-          <li className="nav-links">
-            <a>Home</a>
-          </li>
-          <li className="nav-links">
-            <a>Property</a>
-          </li>
-          <li className="nav-links">
-            <a>Blog</a>
-          </li>
-          <li className="nav-links">
-            <a>Agents</a>
-          </li>
+          <Link to="/" className="link">
+            <li className="nav-links">
+              <a>Home</a>
+            </li>
+          </Link>
+
+          <a href="#properties" className="link">
+            <li className="nav-links">
+              <a>Property</a>
+            </li>
+          </a>
+          <Link to="/" className="link">
+            <li className="nav-links">
+              <a>About us</a>
+            </li>
+          </Link>
+          <Link to="/" className="link">
+            <li className="nav-links">
+              <a>Agents</a>
+            </li>
+          </Link>
+          <Link to="/" className="link">
           <li className="nav-links">
             <a>Contact us</a>
           </li>
+          </Link>
         </ul>
 
-        <GoSearch className="search" />
+        <GoSearch className="link search" />
       </div>
     </StyledNav>
   );
@@ -44,20 +55,13 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 12.5px;
-  font-weight: 500;
-  line-height: 0.9;
-  font-family: "inter", "sans-serif";
-  padding: 8px 10px;
-  color: #061580;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 12;
-   background-color: rgb(240, 240, 230);
-
-  
+  background-color: rgb(240, 240, 230);
+  padding: 8px 10px;
 
   .nav-right {
     display: flex;
@@ -73,6 +77,15 @@ const StyledNav = styled.nav`
   }
   .nav-links {
     position: relative;
+  }
+  .link {
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 0.9;
+    font-family: "inter", "sans-serif";
+
+    color: #061580;
   }
   .nav-links::after {
     content: "";

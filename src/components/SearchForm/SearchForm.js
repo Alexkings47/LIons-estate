@@ -53,14 +53,8 @@ export default Search;
 
 const StyledDiv = styled.form`
   height: 7rem;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.4)
-  );
+  background: none;
   position: relative;
-  box-shadow: 5px 5px 8px #888888;
-  border-radius: 5px;
 
   @media (max-width: 800px) {
     .content > * {
@@ -75,6 +69,8 @@ const StyledDiv = styled.form`
     width: 100%;
     height: 100%;
     z-index: 3;
+    box-shadow: 5px 5px 8px #888888;
+    border-radius: 5px;
 
     & > * {
       min-width: 6rem;
@@ -92,10 +88,13 @@ const StyledDiv = styled.form`
     left: 0;
     width: 100%;
     height: 100%;
-    filter: blur(20px);
+    // filter: blur(15px);
     z-index: 1;
-    background-color: rgba(255,255,255, 0.6);
-   
+    background-color:#44a8eb;
+
+    opacity: 0.5;
+    box-shadow: 5px 5px 8px #888888;
+    border-radius: 5px;
   }
 
   .icons {
@@ -107,5 +106,4 @@ const StyledDiv = styled.form`
     padding: 0;
     //  indent: 10px;
   }
-  
 `;

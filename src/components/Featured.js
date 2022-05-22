@@ -18,7 +18,7 @@ const Featured = () => {
     );
   });
   return (
-    <StyledSection>
+    <StyledSection id="properties">
       <h1> Featured Houses</h1>
       <div className="featured-grid">{Newprojects}</div>
     </StyledSection>
@@ -28,22 +28,18 @@ const Featured = () => {
 export default Featured;
 
 const StyledSection = styled.section`
-  height: 100vh;
-  padding: 14px 3rem 20px;
+  margin-bottom: 7rem;
 
+  padding: 14px 3rem 20px;
   background-color: rgb(240, 240, 230);
 
-  @media (max-width: 800px) {
-    margin-bottom: 10rem;
-  }
+
   .featured-grid {
     padding-top: 15px;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
     grid-gap: 20px;
     grid-column-gap: 10%;
-    margin: 0 auto;
   }
   h1 {
     color: #061580;

@@ -30,7 +30,7 @@ const NewProducts = Products.map((product) => {
 
 export default NewAdditions;
 const StyledSection = styled.section`
-  height: 80vh;
+  height: 85vh;
   display: grid;
   text-transform: capitalize;
   grid-template-rows: repeat(3, 1fr);

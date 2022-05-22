@@ -20,10 +20,10 @@ const StyledBtn = styled.button`
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 2px 1.5px rgba(0, 0, 0, 0.2);
-  font-size: 13px;
   border: none;
   transition: 0.5s;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 13px;
   font-family: "karla";
 
   &:hover {

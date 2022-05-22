@@ -23,13 +23,19 @@ function toggle(){
 
       <ul className="social-media">
         <li className="icons">
-          <AiFillInstagram />
+          <a href="https://www.instagram.com/alex_kings47/" target="_blank">
+            <AiFillInstagram />
+          </a>
         </li>
         <li className="icons">
-          <AiOutlineWhatsApp />
+          <a href="">
+            <AiOutlineWhatsApp />
+          </a>
         </li>
         <li className="icons">
-          <AiFillTwitterCircle />{" "}
+          <a href="">
+            <AiFillTwitterCircle />{" "}
+          </a>
         </li>
       </ul>
 
@@ -96,8 +102,14 @@ const StyledFooter = styled.footer`
     align-items: center;
     list-style-type: none;
   }
-  .icons {
+  .icons > a {
     font-size: 1.2rem;
+    color: #44a8eb;
+
+    &:active,
+    &:hover {
+      color: red;
+    }
   }
   .list {
     display: flex;
@@ -115,7 +127,6 @@ const StyledFooter = styled.footer`
     border: none;
     background: none;
   }
- 
 
   .link::after {
     content: "";

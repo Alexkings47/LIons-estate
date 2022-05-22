@@ -27,7 +27,6 @@ const ProductCard = ({
             <AiFillStar className="icon-star" />
           </i>
         </h2>
-        <p className="price">{price}</p>
         <small>
           <IoLocationSharp className="icon" />
           {location}
@@ -36,6 +35,7 @@ const ProductCard = ({
           <IoMdBed className="icon" />
           {specification}
         </small>
+        <p className="price">{price}</p>
       </div>
       {/* <Button value={"view me"} color={"btn-blue"} width={"btn-small"} /> */}
     </StyledDiv>
@@ -52,16 +52,16 @@ const StyledDiv = styled.div`
   overflow: hidden;
   font-family: "karla";
   box-shadow: 5px 5px 8px #888888;
-  background:white;
+  background: white;
 
   .details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 50%;
+    height: 40%;
     text-align: left;
-    padding: 10px 5px;
+    padding: 10px 10px;
   }
 
   .img {
@@ -99,7 +99,7 @@ const StyledDiv = styled.div`
     font-size: 13px;
     letter-spacing: -1px;
     font-weight: 500;
-   color: #44a8eb;
+    color: #44a8eb;
   }
   h2 {
     font-size: 15px;

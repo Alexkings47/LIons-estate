@@ -73,7 +73,9 @@ const StyledHeader = styled.header`
     font-style: italic;
     text-transform: lowercase;
     margin-bottom: 10px;
-    color: #061580;
+    // color: #08c77e;
+    color: #44a8eb;
+   
   }
 
   .heading-end {
