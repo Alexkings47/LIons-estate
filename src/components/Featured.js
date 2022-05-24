@@ -28,7 +28,7 @@ const Featured = () => {
 export default Featured;
 
 const StyledSection = styled.section`
-  margin-bottom: 7rem;
+  // margin-bottom: 7rem;
 
   padding: 14px 3rem 20px;
   background-color: rgb(240, 240, 230);

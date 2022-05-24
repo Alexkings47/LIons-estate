@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
+import Button from "./Button/Button";
 import { FiMapPin } from "react-icons/fi";
 import styled from "styled-components";
 import { AiOutlineCaretDown } from "react-icons/ai";
@@ -8,7 +8,7 @@ import { AiOutlineCaretDown } from "react-icons/ai";
 
 const Search = () => {
   return (
-    <StyledDiv>
+    <StyledDiv className="formClass">
       <div className="enableBlur"></div>
       <div className="content">
         <input
@@ -55,6 +55,7 @@ const StyledDiv = styled.form`
   height: 7rem;
   background: none;
   position: relative;
+  margin-top: 1rem;
 
   @media (max-width: 800px) {
     .content > * {
@@ -69,7 +70,6 @@ const StyledDiv = styled.form`
     width: 100%;
     height: 100%;
     z-index: 3;
-    box-shadow: 5px 5px 8px #888888;
     border-radius: 5px;
 
     & > * {
@@ -90,10 +90,9 @@ const StyledDiv = styled.form`
     height: 100%;
     // filter: blur(15px);
     z-index: 1;
-    background-color:#44a8eb;
+    // background-color:#44a8eb;
 
     opacity: 0.5;
-    box-shadow: 5px 5px 8px #888888;
     border-radius: 5px;
   }
 

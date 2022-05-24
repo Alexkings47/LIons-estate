@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 function Navbar() {
   return (
     <StyledNav className="navbar">
-      <Link to="/">
+      <Link to="/" className="logoLink">
         <img
           src={require("../images/lion.jpg")}
           className="navbar-logo"
@@ -37,13 +37,14 @@ function Navbar() {
             </li>
           </Link>
           <Link to="/" className="link">
-          <li className="nav-links">
-            <a>Contact us</a>
-          </li>
+            <li className="nav-links">
+              <a>Contact us</a>
+            </li>
           </Link>
+          <li className="nav-links">
+            <GoSearch className="link search" />
+          </li>
         </ul>
-
-        <GoSearch className="link search" />
       </div>
     </StyledNav>
   );
@@ -61,18 +62,19 @@ const StyledNav = styled.nav`
   width: 100%;
   z-index: 12;
   background-color: rgb(240, 240, 230);
+  background-color: #060129;
+
   padding: 8px 10px;
 
   .nav-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 55%;
   }
   .nav-items {
     display: flex;
     justify-content: space-between;
-    width: 18rem;
+    width: auto;
     list-style: none;
   }
   .nav-links {
@@ -86,6 +88,7 @@ const StyledNav = styled.nav`
     font-family: "inter", "sans-serif";
 
     color: #061580;
+    color: #44a8eb;
   }
   .nav-links::after {
     content: "";
@@ -110,7 +113,9 @@ const StyledNav = styled.nav`
     border-radius: 50%;
     display: block;
   }
-
+  .logoLink {
+    margin-right: auto;
+  }
   .search {
     font-size: 1.5rem;
   }

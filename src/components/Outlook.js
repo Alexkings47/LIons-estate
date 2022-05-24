@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Button/Button";
+import Button from "./Button/Button";
 
 const Outlook = () => {
   return (
@@ -12,7 +12,7 @@ const Outlook = () => {
         <figure className="image-elem1">
           <img
             className="image1"
-            src={require("../../images/finehouse.jpg")}
+            src={require("../images/finehouse.jpg")}
             alt=""
           />
           <p>ESTATES</p>
@@ -21,7 +21,7 @@ const Outlook = () => {
         <figure className="image-elem3">
           <img
             className="image3"
-            src={require("../../images/bgimg.jpeg")}
+            src={require("../images/bgimg.jpeg")}
             alt=""
           />
         </figure>

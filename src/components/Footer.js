@@ -6,21 +6,17 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {IoIosArrowUp} from "react-icons/io"
-
-
+import { IoIosArrowUp } from "react-icons/io";
 
 const Footer = () => {
-const [showfilters, setShowFilters] = React.useState(false)
-function toggle(){
- setShowFilters(!showfilters)
-}
+  const [showFilters, setShowFilters] = React.useState(false);
+  function toggle() {
+    setShowFilters(!showFilters);
+  }
 
-  return (
-    // {showfilters? :""}
+  return !showFilters ? (
     <StyledFooter>
       <h2> &copy; 2022 Lions Estate Agency.</h2>
-
       <ul className="social-media">
         <li className="icons">
           <a href="https://www.instagram.com/alex_kings47/" target="_blank">
@@ -38,7 +34,6 @@ function toggle(){
           </a>
         </li>
       </ul>
-
       <ul className="list">
         <li>
           <Link className="link" to="/">
@@ -67,11 +62,13 @@ function toggle(){
         </li>
         <li>
           <button onClick={toggle}>
-            <IoIosArrowUp className="icons" />
+            <IoIosArrowUp />
           </button>
         </li>
       </ul>
     </StyledFooter>
+  ) : (
+    <div className="expanded-footer">aas</div>
   );
 };
 
@@ -87,7 +84,6 @@ const StyledFooter = styled.footer`
   width: 100%;
   margin-top: 4rem;
   padding: 0 20px;
-  // background-color: #061580;
   background-color: #060129;
   display: flex;
   justify-content: space-between;
@@ -116,16 +112,19 @@ const StyledFooter = styled.footer`
     list-style-type: none;
     padding: 10px;
     justify-content: space-between;
-    width: 300px;
   }
   .link {
     text-decoration: none;
     color: #44a8eb;
     position: relative;
+    margin-right: 5px;
   }
   button {
     border: none;
     background: none;
+    color: #44a8eb;
+    font-size: 1.2rem;
+    cursor: pointer;
   }
 
   .link::after {
@@ -148,5 +147,10 @@ const StyledFooter = styled.footer`
 
   h2 {
     font-size: 15px;
+  }
+
+  .expanded-footer{
+    height: 40vh;
+    color: #44a8eb;
   }
 `;

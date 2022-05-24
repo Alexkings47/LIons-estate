@@ -45,7 +45,8 @@ export default Services;
 
 const StyledSection = styled.section`
   color: #061580;
-  padding: 1rem 3rem 2rem 3rem;
+  margin-top:6rem;
+  padding: 3rem 3rem 2rem 3rem;
   text-transform: capitalize;
   font-family: "Quicksand", sans-serif;
   background-color: rgb(240, 240, 230);
