@@ -22,10 +22,7 @@ const ProductCard = ({
       <div className="details">
         <h2>
           {title}
-          <i>
-            {" "}
-            <AiFillStar className="icon-star" />
-          </i>
+          <AiFillStar className="icon-star" />
         </h2>
         <small>
           <IoLocationSharp className="icon" />
@@ -37,7 +34,6 @@ const ProductCard = ({
         </small>
         <p className="price">{price}</p>
       </div>
-      {/* <Button value={"view me"} color={"btn-blue"} width={"btn-small"} /> */}
     </StyledDiv>
   );
 };

@@ -21,17 +21,17 @@ function Navbar() {
             </li>
           </Link>
 
-          <a href="#properties" className="link">
+          <Link to="/houses" className="link">
             <li className="nav-links">
               <a>Property</a>
             </li>
-          </a>
+          </Link>
           <Link to="/" className="link">
             <li className="nav-links">
               <a>About us</a>
             </li>
           </Link>
-          <Link to="/" className="link">
+          <Link to="/agents" className="link">
             <li className="nav-links">
               <a>Agents</a>
             </li>
@@ -41,7 +41,7 @@ function Navbar() {
               <a>Contact us</a>
             </li>
           </Link>
-          <li className="nav-links">
+          <li>
             <GoSearch className="link search" />
           </li>
         </ul>
@@ -74,6 +74,7 @@ const StyledNav = styled.nav`
   .nav-items {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: auto;
     list-style: none;
   }
@@ -86,7 +87,7 @@ const StyledNav = styled.nav`
     font-weight: 500;
     line-height: 0.9;
     font-family: "inter", "sans-serif";
-
+    margin-right: 10px;
     color: #061580;
     color: #44a8eb;
   }
@@ -97,7 +98,6 @@ const StyledNav = styled.nav`
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: "";
     background-color: orangered;
     transition: 0.5s;
     display: none;
@@ -113,9 +113,7 @@ const StyledNav = styled.nav`
     border-radius: 50%;
     display: block;
   }
-  .logoLink {
-    margin-right: auto;
-  }
+
   .search {
     font-size: 1.5rem;
   }

@@ -1,38 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import agents from "../pages/agents";
+import PartnerCard from "./PartnerCard";
 
-const Partners = ({partnerClass}) => {
+const Partners = ({ partnerClass, realtors, many }) => {
+  const [testimonial, setTestimonial] = React.useState([""]);
+  console.log(testimonial);
+
+  React.useEffect(() => {
+    fetch("https://testimonialapi.toolcarton.com/api/1")
+      .then((resp) => resp.json())
+      .then((data) => setTestimonial([data]));
+  }, []);
+
+  const PartnersArr = testimonial.map((card) => {
+    return (
+      <PartnerCard name={card.name} key={card.id} title={card.designation} />
+    );
+  });
+
+  const ManyPartners = [];
+  for (let i = 0; i < many; i++) {
+    ManyPartners.push(PartnersArr);
+  }
   return (
     <StyledDiv className="partnerClass">
-      <h2>Our Realtors</h2>
+      <h2>{realtors}</h2>
       <div className="partners">
-        <div className="partners-div">
-          <img
-            className="partner-image"
-            src={require("../images/realtor1.jpg")}
-            alt=""
-          />
-          <h3>Axel</h3>
-          <p>description</p>
-        </div>
-        <div className="partners-div">
-          <img
-            className="partner-image"
-            src={require("../images/realtor1.jpg")}
-            alt=""
-          />
-          <h3>Obinna</h3>
-          <p>description</p>
-        </div>
-        <div className="partners-div">
-          <img
-            className="partner-image"
-            src={require("../images/realtor1.jpg")}
-            alt=""
-          />
-          <h3>Prince</h3>
-          <p>description</p>
-        </div>
+        {/* {PartnersArr} */}
+        {ManyPartners}
       </div>
     </StyledDiv>
   );
@@ -42,23 +38,26 @@ export default Partners;
 
 const StyledDiv = styled.div`
   padding: 3rem 3rem;
+
   // background-color: rgb(240, 240, 230);
-  // color: #44a8eb;
-  // width: 25%;
+
+  p {
+    color: #44a8eb;
+  }
+
   width: 100%;
 
   .partners {
-    display: flex;
-    // flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    // height: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   grid-gap: 20px;
+    
   }
   @media (max-width: 800px) {
     padding: 2rem 0;
 
     .partners {
-      width: 95vw;
+      width: 100%;
       flex-direction: row;
       padding: 0 3rem;
     }
@@ -78,17 +77,6 @@ const StyledDiv = styled.div`
   //   width: 100%;
   //   height: 25px;
   // }
-
-  .partners-div {
-    height: 100%;
-  }
-  .partner-image {
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    object-fit: cover;
-    filter: brightness(1.15);
-  }
 
   h2 {
     color: #44a8eb;

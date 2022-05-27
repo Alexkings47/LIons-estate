@@ -21,7 +21,7 @@ const Header = () => {
             ... Your house <span className="heading-end">your pride</span>
           </h3>
       </div>
-      <Partners partnerClass={"partnerClass"}/>
+      <Partners many={3} partnerClass={"partnerClass"} realtors={"Our Top Realtors"} />
       <Search formClass ={"formClass"} />
     </StyledHeader>
   );
