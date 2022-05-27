@@ -5,7 +5,7 @@ import {
   AiOutlineWhatsApp,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import { IoIosArrowUp } from "react-icons/io";
 
 const Footer = () => {
@@ -19,17 +19,21 @@ const Footer = () => {
       <h2> &copy; 2022 Lions Estate Agency.</h2>
       <ul className="social-media">
         <li className="icons">
-          <a href="https://www.instagram.com/alex_kings47/" target="_blank">
+          <a
+            href="https://www.instagram.com/alex_kings47/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <AiFillInstagram />
           </a>
         </li>
         <li className="icons">
-          <a href="">
+          <a href="#!">
             <AiOutlineWhatsApp />
           </a>
         </li>
         <li className="icons">
-          <a href="">
+          <a href="#!">
             <AiFillTwitterCircle />{" "}
           </a>
         </li>
@@ -149,7 +153,7 @@ const StyledFooter = styled.footer`
     font-size: 15px;
   }
 
-  .expanded-footer{
+  .expanded-footer {
     height: 40vh;
     color: #44a8eb;
   }
