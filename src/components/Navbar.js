@@ -16,30 +16,20 @@ function Navbar() {
       <div className="nav-right">
         <ul className="nav-items">
           <Link to="/" className="link">
-            <li className="nav-links">
-              <a href="#!">Home</a>
-            </li>
+            <li className="nav-links">Home</li>
           </Link>
 
           <Link to="/houses" className="link">
-            <li className="nav-links">
-              <a href="#!">Property</a>
-            </li>
+            <li className="nav-links">Property</li>
           </Link>
           <Link to="/" className="link">
-            <li className="nav-links">
-              <a href="#!">About us</a>
-            </li>
+            <li className="nav-links">About us</li>
           </Link>
           <Link to="/agents" className="link">
-            <li className="nav-links">
-              <a href="#!">Agents</a>
-            </li>
+            <li className="nav-links">Agents</li>
           </Link>
           <Link to="/" className="link">
-            <li className="nav-links">
-              <a href="#!">Contact us</a>
-            </li>
+            <li className="nav-links">Contact us</li>
           </Link>
           <li>
             <GoSearch className="link search" />
