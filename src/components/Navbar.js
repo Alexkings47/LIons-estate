@@ -1,7 +1,7 @@
 import React from "react";
 import { GoSearch } from "react-icons/go";
 import styled from "styled-components";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (

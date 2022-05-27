@@ -5,7 +5,7 @@ import {
   AiOutlineWhatsApp,
   AiFillTwitterCircle,
 } from "react-icons/ai";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IoIosArrowUp } from "react-icons/io";
 
 const Footer = () => {
