@@ -17,7 +17,7 @@ const NewProperty = () => {
   //   location,
   //   specification,
   //   status,
-
+setForm(form)
   return (
     <StyledSection>
       <Navbar />

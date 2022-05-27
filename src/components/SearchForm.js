@@ -1,10 +1,10 @@
 import React from "react";
 import Button from "./Button/Button";
-import { FiMapPin } from "react-icons/fi";
+// import { FiMapPin } from "react-icons/fi";
 import styled from "styled-components";
-import { AiOutlineCaretDown } from "react-icons/ai";
+// import { AiOutlineCaretDown } from "react-icons/ai";
 
-// console.log(styled);
+
 
 const Search = () => {
   return (

@@ -5,7 +5,6 @@ import Search from "./SearchForm";
 import styled from "styled-components";
 import Partners from "./Partners";
 import img from "../images/header.jpg";
-import img1 from "../images/bgheader.jpg"
 
 const Header = () => {
   return (

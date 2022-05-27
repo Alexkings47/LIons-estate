@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import agents from "../pages/agents";
+// import agents from "../pages/agents";
 import PartnerCard from "./PartnerCard";
 
 const Partners = ({ partnerClass, realtors, many }) => {
@@ -50,8 +50,7 @@ const StyledDiv = styled.div`
   .partners {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-   grid-gap: 20px;
-    
+    grid-gap: 20px;
   }
   @media (max-width: 800px) {
     padding: 2rem 0;

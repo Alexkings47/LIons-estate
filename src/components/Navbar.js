@@ -1,7 +1,7 @@
 import React from "react";
 import { GoSearch } from "react-icons/go";
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -17,28 +17,28 @@ function Navbar() {
         <ul className="nav-items">
           <Link to="/" className="link">
             <li className="nav-links">
-              <a>Home</a>
+              <a href="#!">Home</a>
             </li>
           </Link>
 
           <Link to="/houses" className="link">
             <li className="nav-links">
-              <a>Property</a>
+              <a href="#!">Property</a>
             </li>
           </Link>
           <Link to="/" className="link">
             <li className="nav-links">
-              <a>About us</a>
+              <a href="#!">About us</a>
             </li>
           </Link>
           <Link to="/agents" className="link">
             <li className="nav-links">
-              <a>Agents</a>
+              <a href="#!">Agents</a>
             </li>
           </Link>
           <Link to="/" className="link">
             <li className="nav-links">
-              <a>Contact us</a>
+              <a href="#!">Contact us</a>
             </li>
           </Link>
           <li>
