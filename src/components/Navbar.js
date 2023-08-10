@@ -8,9 +8,11 @@ function Navbar() {
     <StyledNav className="navbar">
       <Link to="/" className="logoLink">
         <img
-          src={require("../images/lion.jpg")}
+          src={("/leapicon.png")}
           className="navbar-logo"
           alt="logo"
+      
+          
         />
       </Link>
       <div className="nav-right">
@@ -51,10 +53,11 @@ const StyledNav = styled.nav`
   left: 0;
   width: 100%;
   z-index: 12;
-  background-color: rgb(240, 240, 230);
-  background-color: #060129;
+  /* background-color: #060129; */
+  background-color: #50C878;
 
   padding: 8px 10px;
+
 
   .nav-right {
     display: flex;
@@ -70,6 +73,7 @@ const StyledNav = styled.nav`
   }
   .nav-links {
     position: relative;
+    font-size: 18px;
   }
   .link {
     text-decoration: none;
@@ -77,9 +81,8 @@ const StyledNav = styled.nav`
     font-weight: 500;
     line-height: 0.9;
     font-family: "inter", "sans-serif";
-    margin-right: 10px;
-    color: #061580;
-    color: #44a8eb;
+    margin-right: 25px;
+   color: white;
   }
   .nav-links::after {
     content: "";
@@ -99,9 +102,11 @@ const StyledNav = styled.nav`
   }
 
   .navbar-logo {
-    height: 2.5rem;
+    height: 140px;
+    width: 350px;
     border-radius: 50%;
     display: block;
+    border: 1px solid red;
   }
 
   .search {

@@ -4,7 +4,7 @@ import Button from "./Button/Button";
 import Search from "./SearchForm";
 import styled from "styled-components";
 import Partners from "./Partners";
-import img from "../images/header.jpg";
+import img from "../images/snowflakes.jpg";
 
 const Header = () => {
   return (
@@ -17,7 +17,7 @@ const Header = () => {
             <Button value={"For rent"} color={"btn-orange"} />
           </div>
           <h3 className="heading-left">
-            ... Your house <span className="heading-end">your pride</span>
+            ... Surpassing the <span className="heading-end"> Limits of Real estate</span>
           </h3>
       </div>
       <Partners many={3} partnerClass={"partnerClass"} realtors={"Our Top Realtors"} />
@@ -34,6 +34,7 @@ const StyledHeader = styled.header`
   position: relative;
   // background-color: #060129;
   background-color: rgb(240, 240, 230);
+  
   display: flex;
   flex-direction: column;
   // height: 80vh;
@@ -44,7 +45,7 @@ const StyledHeader = styled.header`
   .header-body {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url(${img});
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     background-size: cover;
     color: black;

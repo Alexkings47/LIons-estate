@@ -6,10 +6,13 @@ import Featured from "../components/Featured";
 import Footer from "../components/Footer";
 import Services from '../components/Services';
 import Testimonial from '../components/Testimonial';
+// import Container from '../components/container';
+
 
 const home = () => {
   return (
     <div>
+      {/* <Container> */}
       <Header />
       <Services />
       <Outlook />
@@ -17,6 +20,7 @@ const home = () => {
       <Featured />
       <Testimonial />
       <Footer />
+      {/* </Container> */}
     </div>
   );
 }
