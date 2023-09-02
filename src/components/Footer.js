@@ -81,18 +81,13 @@ export default Footer;
 const StyledFooter = styled.footer`
   color: #44a8eb;
   height: 5rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 12;
   width: 100%;
   margin-top: 4rem;
   padding: 0 20px;
-  background-color: #060129;
+  background-color: var(--purple);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "karla";
 
   .social-media {
     display: flex;

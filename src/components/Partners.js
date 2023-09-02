@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import agents from "../pages/agents";
+import agents from "../pages/agents";
 import PartnerCard from "./PartnerCard";
 
 const Partners = ({ partnerClass, realtors, many }) => {
@@ -25,7 +25,7 @@ const Partners = ({ partnerClass, realtors, many }) => {
   }
   return (
     <StyledDiv className="partnerClass">
-      <h2>{realtors}</h2>
+      <h2 color ="var(--green)">{realtors}</h2>
       <div className="partners">
         {/* {PartnersArr} */}
         {ManyPartners}
@@ -39,12 +39,16 @@ export default Partners;
 const StyledDiv = styled.div`
   padding: 3rem 3rem;
 
-  // background-color: rgb(240, 240, 230);
-
   p {
     color: #44a8eb;
   }
 
+  h2 {
+    color: #44a8eb;
+    color: #061580;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
   width: 100%;
 
   .partners {
@@ -76,11 +80,4 @@ const StyledDiv = styled.div`
   //   width: 100%;
   //   height: 25px;
   // }
-
-  h2 {
-    color: #44a8eb;
-    color: #061580;
-    flex: 1;
-    margin-bottom: 1rem;
-  }
 `;

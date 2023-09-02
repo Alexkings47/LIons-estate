@@ -2,25 +2,16 @@ import React from "react";
 import { GoSearch } from "react-icons/go";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Button from "./Button/Button";
 
 function Navbar() {
   return (
     <StyledNav className="navbar">
-      <Link to="/" className="logoLink">
-        <img
-          src={("/leapicon.png")}
-          className="navbar-logo"
-          alt="logo"
-      
-          
-        />
-      </Link>
-      <div className="nav-right">
+      <div className="nav-items-div">
         <ul className="nav-items">
           <Link to="/" className="link">
             <li className="nav-links">Home</li>
           </Link>
-
           <Link to="/houses" className="link">
             <li className="nav-links">Property</li>
           </Link>
@@ -33,10 +24,14 @@ function Navbar() {
           <Link to="/" className="link">
             <li className="nav-links">Contact us</li>
           </Link>
-          <li>
-            <GoSearch className="link search" />
-          </li>
         </ul>
+      </div>
+
+      <Link to="/" className="logoLink">
+        <img src={"/leapicon.png"} className="navbar-logo" alt="logo" />
+      </Link>
+      <div className="button_div">
+        <Button value="login" color="green" />
       </div>
     </StyledNav>
   );
@@ -53,17 +48,21 @@ const StyledNav = styled.nav`
   left: 0;
   width: 100%;
   z-index: 12;
-  /* background-color: #060129; */
-  background-color: #50C878;
+  height: 9vh;
+  border-radius: 0 0 5px 5px;
+  background-color: var(--green);
+  padding: 8px 3rem;
 
-  padding: 8px 10px;
-
-
-  .nav-right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  * {
+    flex-basis: 33%;
   }
+
+  .navbar-logo {
+    width: 4rem;
+    height: 2rem;
+    justify-self: flex-end;
+  }
+
   .nav-items {
     display: flex;
     justify-content: space-between;
@@ -73,46 +72,10 @@ const StyledNav = styled.nav`
   }
   .nav-links {
     position: relative;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 400;
   }
-  .link {
-    text-decoration: none;
-    font-size: 12.5px;
-    font-weight: 500;
-    line-height: 0.9;
-    font-family: "inter", "sans-serif";
-    margin-right: 25px;
-   color: white;
-  }
-  .nav-links::after {
-    content: "";
-    position: absolute;
-    top: 18px;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: orangered;
-    transition: 0.5s;
-    display: none;
-    cursor: pointer;
-  }
-
-  .nav-links:hover::after {
-    display: block;
-  }
-
-  .navbar-logo {
-    height: 140px;
-    width: 350px;
-    border-radius: 50%;
-    display: block;
-    border: 1px solid red;
-  }
-
-  .search {
-    font-size: 1.5rem;
-  }
-  .search:hover {
-    transform: scale(1.2);
+  .nav-links:hover {
+    color: var(--light-blue);
   }
 `;

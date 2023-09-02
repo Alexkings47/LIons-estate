@@ -11,17 +11,34 @@ const Header = () => {
     <StyledHeader>
       <Navbar />
       <div className="header-body">
-          <h1 className="title"> Lions estate agency </h1>
-          <div className="quick-details">
-            <Button value={"For Purchase"} />
-            <Button value={"For rent"} color={"btn-orange"} />
-          </div>
-          <h3 className="heading-left">
-            ... Surpassing the <span className="heading-end"> Limits of Real estate</span>
+        <div className="header-text">
+          <h1 className="title"> LEAP REALTY </h1>
+
+          <h3 className="motto">LEAP over your Real estate limits </h3>
+          <h3 className="header-text-about">
+            LEAP REALTY is aimed at helping you satisfy your Real estate <br />
+            Lands |Houses | Event centers | Declutter items desires 🌹
           </h3>
+          <div className="quick-details">
+            <Button value={"For rent"} color={"btn-orange"} />
+            <Button value={"For Purchase"} />
+          </div>
+        </div>
+        <div className="header-div-image">
+          <img
+            src={require("../images/header-house.jpeg")}
+            alt=""
+            className="header-image"
+          />
+        </div>
       </div>
-      <Partners many={3} partnerClass={"partnerClass"} realtors={"Our Top Realtors"} />
-      <Search formClass ={"formClass"} />
+
+      <Partners
+        many={3}
+        partnerClass={"partnerClass"}
+        realtors={"Our Top Realtors"}
+      />
+      <Search formClass={"formClass"} />
     </StyledHeader>
   );
 };
@@ -29,33 +46,73 @@ const Header = () => {
 export default Header;
 
 const StyledHeader = styled.header`
-  padding: 0.5rem 3rem;
-  font-family: "Quicksand", sans-serif;
-  position: relative;
-  // background-color: #060129;
+  background-color: var(--black);
   background-color: rgb(240, 240, 230);
-  
   display: flex;
   flex-direction: column;
-  // height: 80vh;
-  // flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
   .header-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(${img});
-    background-repeat: repeat;
-    background-position: center;
-    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    margin-top: 10rem;
+    /* background-color: var(--green); */
+  }
+
+  .header-text {
     color: black;
-    margin-top: 3rem;
-    min-height: 60vh;
-    width: 100%;
+    /* min-height: 60vh; */
+    height: 30rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    text-align: left;
+    padding: 3rem;
+
+    &-about {
+      text-align: left;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+
+  .title {
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    color: var(--green);
+    font-family: "Nunito";
+  }
+  .motto {
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: -1px;
+
+    text-transform: lowercase;
+    margin-bottom: 2.5rem;
+
+    color: var(--green);
+  }
+  .quick-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 17rem;
+    padding: 1rem 0;
+  }
+
+  .header-div-image {
+    height: 100%;
+
+    .header-image {
+      width: 35rem;
+      height: 30rem;
+      border-radius: 15px;
+    }
   }
 
   @media (max-width: 800px) {
@@ -72,36 +129,5 @@ const StyledHeader = styled.header`
     .partnerClass {
       width: 100%;
     }
-  }
-
-  .title {
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: "poppins", sans-serif;
-    margin-bottom: 1.1rem;
-    // color: #061580;
-    color: #44a8eb;
-  }
-  .heading-left {
-    font-weight: 100;
-    font-size: 16px;
-    letter-spacing: -1px;
-    font-style: italic;
-    text-transform: lowercase;
-    margin-bottom: 10px;
-    // color: #08c77e;
-    color: #44a8eb;
-  }
-
-  .heading-end {
-    font-weight: 700;
-  }
-  .quick-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 17rem;
-    padding: 1rem 0;
   }
 `;
